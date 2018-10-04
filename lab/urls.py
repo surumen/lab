@@ -10,7 +10,9 @@ from django.views.generic.base import RedirectView
 favicon_view = RedirectView.as_view(url='/static/favicon.ico', permanent=True)
 
 urlpatterns = [
-    path('favicon.ico', favicon_view),
+    path('favicon.ico/', favicon_view),
+    path('/favicon.ico', favicon_view),
+    path('/', TemplateView.as_view(template_name='home.html'), name='home'),
     path('', TemplateView.as_view(template_name='home.html'), name='home'),
     path('dashboard/', login_required(TemplateView.as_view(template_name='dashboard.html')), name='dashboard'),
     path('profile/', login_required(TemplateView.as_view(template_name='profile.html')), name='profile'),
