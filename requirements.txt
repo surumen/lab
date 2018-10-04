@@ -6,3 +6,4 @@ Flask-Cors==3.0.6
 mongoengine==0.15.3
 whitenoise==4.1
 gunicorn==19.7.1
+django-favicon==0.1.3
