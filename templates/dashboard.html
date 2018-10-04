@@ -1,0 +1,112 @@
+{% extends 'header.html' %} {% block title %}Home{% endblock %} {% block content %}
+<div class="dashboard">
+    <div class="dashboard_inner">
+        <div class="container">
+            <div class="header-toolbar">
+                <div class="header-toolbar__content">
+                    <div class="header-toolbar__heading">
+                        <h2>M-Soma Lab is the cloud for smarter business</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="header-toolbar">
+                <div class="header-toolbar__content">
+                    <div class="header-toolbar__heading">
+                        <p>A full-stack cloud platform that spans public, private and hybrid environments. Build with a robust suite of advanced data and AI tools, and draw on deep industry expertise to help you on your journey to the cloud.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <form class="toolbar-report" action="/report" method="get" data-behavior="toolbar_report">
+                <div class="toolbar-report__control toolbar-report__control--inline">
+                    <select class="form-control-grey" name="grouping">
+                        <option selected="" value="project">Projects</option>
+                        <option value="user">Users</option>
+                    </select>
+                </div>
+                <div class="no-mob">
+                    <span class="tooltip-wrapper">
+                <a class="toolbar-report__btn has-tooltip" href="/report.pdf?start=2018-10-01&amp;end=2018-10-31&amp;grouping=project"><i class="fa fa-file-pdf"></i></a>
+                <div class="tooltip">
+                    <span>Create&nbsp;PDF</span>
+                </div>
+                </span>
+        </div>
+        <div class="toolbar-report__addon">
+            <div class="toolbar-report__range">
+                <a href="/report?start=2018-09-01&amp;end=2018-09-30&amp;grouping=project"><i class="fa fa-angle-left"></i></a>
+                <a href="/report?start=2018-11-01&amp;end=2018-11-30&amp;grouping=project"><i class="fa fa-angle-right"></i></a>
+            </div>
+        </div>
+        </form>
+    </div>
+</div>
+</div>
+<div class="dashboardb">
+    <div class="container">
+        <div class="starter-plan">
+            <div class="starter-plan__options">
+                <div class="starter-plan__option ">
+                    <div class="dashboard_card">
+                        <div class="starter-plan__title">Private and Hybrid Cloud</div>
+                        <div class="starter-plan__note">Closes in 12 hours</div>
+                    </div>
+                    <div>
+                        <div class="starter-plan__note empty">&nbsp;</div>
+                        <p class="starter-plan__list">Private cloud for local deployments. Integration, orchestration and management for hybrid cloud.</p>
+                        <div class="starter-plan__btn">
+                            <a href="/subscription/downgrade" class="btn-primary">Enroll</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="starter-plan__option ">
+                    <div class="dashboard_card">
+                        <div class="starter-plan__title">Private and Hybrid Cloud</div>
+                        <div class="starter-plan__note">Closes in 12 hours</div>
+                    </div>
+                    <div>
+                        <div class="starter-plan__note empty">&nbsp;</div>
+                        <p class="starter-plan__list">Private cloud for local deployments. Integration, orchestration and management for hybrid cloud.</p>
+                        <div class="starter-plan__btn">
+                            <a href="/subscription/downgrade" class="btn-primary">Enroll</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="starter-plan__option ">
+                    <div class="dashboard_card">
+                        <div class="starter-plan__title">Private and Hybrid Cloud</div>
+                        <div class="starter-plan__note">Closes in 12 hours</div>
+                    </div>
+                    <div>
+                        <div class="starter-plan__note empty">&nbsp;</div>
+                        <p class="starter-plan__list">Private cloud for local deployments. Integration, orchestration and management for hybrid cloud.</p>
+                        <div class="starter-plan__btn">
+                            <a href="/subscription/downgrade" class="btn-primary">Enroll</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="dashboardc">
+    <div class="dashboardc_inner">
+        <div class="container">
+            <div class="header-toolbar">
+                <div class="header-toolbar__content">
+                    <div class="header-toolbar__heading">M-Soma Lab is the cloud for smarter business
+                    </div>
+                </div>
+            </div>
+            <div class="header-toolbar">
+                <div class="header-toolbar__content">
+                    <div class="header-toolbar__heading">
+                        <p>A full-stack cloud platform that spans public, private and hybrid environments. Build with a robust suite of advanced data and AI tools, and draw on deep industry expertise to help you on your journey to the cloud.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

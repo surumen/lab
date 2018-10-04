@@ -1,0 +1,22 @@
+<svg width="92px" height="71px" viewBox="0 0 92 71" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <filter x="-13.8%" y="-11.6%" width="138.1%" height="134.8%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="10" dy="12" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="10" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.349019608   0 0 0 0 0   0 0 0 0 0.0431372549  0 0 0 0.14 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="clean-design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="375-mobile-cookies" transform="translate(-275.000000, -276.000000)" fill="#FFFFFF">
+            <g id="cookies" transform="translate(166.000000, 129.000000)">
+                <g id="bubble" filter="url(#filter-1)">
+                    <path d="M119.980469,160.343254 C148.979309,186.348142 164.274841,199.350586 165.867066,199.350586 C167.459291,199.350586 159.811524,183.016276 142.923767,150.347656 L119.980469,160.343254 Z" id="Path-2" transform="translate(143.026656, 174.849121) rotate(-25.000000) translate(-143.026656, -174.849121) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

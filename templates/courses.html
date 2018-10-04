@@ -1,0 +1,62 @@
+{% extends 'header.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="starter-plan">
+        <div class="starter-plan__heading">
+            Trial ends in 31 days
+        </div>
+        <div class="starter-plan__text">
+            Boost your productivity, subscribe or switch to free plan with one user.
+        </div>
+        <div class="starter-plan__options">
+            <div class="starter-plan__option ">
+                <div>
+                    <div class="starter-plan__title">For individuals</div>
+                    <div class="starter-plan__label">Free</div>
+                    <div class="starter-plan__note empty">&nbsp;</div>
+                    <ul class="starter-plan__list">
+                        <li>Unlimited projects</li>
+                        <li>Weekly email reports</li>
+                        <li>Exporting PDF</li>
+                        <li class="text-muted">Desktop app (soon)</li>
+                        <li>Project time estimates</li>
+                        <li>1 user</li>
+                        <li class="text-muted">-</li>
+                        <li class="text-muted">-</li>
+                        <li class="text-muted">-</li>
+                        <li class="text-muted">-</li>
+                    </ul>
+                    <div class="starter-plan__btn">
+                        <a href="/subscription/downgrade" class="btn-primary">Switch</a>
+                    </div>
+                </div>
+            </div>
+            <div class="starter-plan__option">
+                <div>
+                    <div class="starter-plan__title">For teams</div>
+                    <div class="starter-plan__label">4 eur</div>
+                    <div class="starter-plan__note">Per user/month</div>
+                    <ul class="starter-plan__list">
+                        <li>Unlimited projects</li>
+                        <li>Weekly email reports</li>
+                        <li>Exporting PDF</li>
+                        <li class="text-muted">Desktop app (soon)</li>
+                        <li>Project time estimates</li>
+                        <li><span class="text-alert">+</span> Unlimited users</li>
+                        <li><span class="text-alert">+</span> Team dashboard
+                            <li><span class="text-alert">+</span> Live Team view</li>
+                            <li><span class="text-alert">+</span> Access levels</li>
+                            <li><span class="text-alert">+</span> Team reports</li>
+                    </ul>
+                    <div class="starter-plan__btn">
+                        <a href="/subscription/new" class="btn-primary">Subscribe</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,90 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home | M-Soma Lab</title>
+    <meta name="twitter:site" content="@PulseredHQ">
+    <meta name="twitter:title" content="Pulse.red — track your project’s time.">
+    <meta name="twitter:description" content="Powerful time tracker for those who appriciate simplicity. No useless infographics; stay focused on the main things.">
+    <meta name="twitter:url" content="https://pulse.red">
+    <meta name="twitter:image" content="https://pulse.red/og-image.png">
+    <meta name="description" content="Powerful time tracker for those who appriciate simplicity. No useless infographics; stay focused on the main things.">
+    <meta property="og:site_name" content="Pulse.red">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pulse.red">
+    <meta property="og:title" content="Pulse.red — track your project’s time.">
+    <meta property="og:description" content="Powerful time tracker for those who appriciate simplicity. No useless infographics; stay focused on the main things.">
+    <link rel="mask-icon" href="mask-icon.svg%3Fv=2" color="#D0021B">
+    <link rel="stylesheet" href="https://fonts.typotheque.com/WF-031211-010285.css" type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}" type="text/css"/> 
+    <link rel="stylesheet" href="{% static 'css/vendor.css' %}" type="text/css"/> 
+    <script src="{% static 'js/jquery.min.js' %}" type="text/javascript"></script>
+
+</head>
+<body class="default">
+    <div class="header-blk">
+        <div class="container">
+            <div class="header-blk__container">
+                <div class="header-blk__ticker">
+                    <a class="header-logo" href="/dashboard">M-Soma Lab<span>.</span></a>
+                    <a class="header-dot" href="/dashboard"></a>
+                    <div class="header-blk__trial">
+                    </div>
+                </div>
+                <div class="header-blk__nav">
+                    <div class="header-nav">
+                        <a class="header-nav__item " href="{% url 'explore' %}">Explore</a>
+                        <a class="header-nav__item " href="{% url 'code' %}">Problems</a>
+                        <a class="header-nav__item " href="{% url 'courses' %}">Courses</a>
+                        <div class="header-nav__divider">|</div>
+                        <div class="header-nav__item dropdown dropdown-usr">
+                            <div class="dropdown-toggle" data-toggle="dropdown">{{ user.username }}</div>
+                            <ul class="dropdown-menu dropdown-usr__menu">
+                                <li><a href="/profile">Settings</a></li>
+                                <li><a href="/activity">Activity</a></li>
+                                <li><a href="/subscription">Subscription</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="{% url 'logout' %}">Logout</a></li>
+                                <li class="dropdown-usr__mob-name">{{ user.username }}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% block content %}
+    {% endblock %}
+    <div class="footer-blk">
+        <div class="container">
+            <div class="footer-blk__container">
+                <div class="footer-blk__copyright">
+                    © 2018 <span class="footer-logo">M-Soma <span>Institute</span></span>
+                </div>
+                <div class="footer-blk__nav">
+                    <div class="footer-nav">
+                        <a href="/privacy" target="_blank" class="footer-nav__item">Privacy Policy</a>
+                        <a href="/terms" target="_blank" class="footer-nav__item">Terms of use</a>
+                    </div>
+                    <div class="footer-nav footer-nav--right">
+                        <a href="https://instagram.com/msoma.institute" target="_blank" class="footer-nav__item no-mob">Instagram</a>
+                        <a href="mailto:hello@msoma.org" class="footer-nav__item"><i class="fa fa-envelope-open"></i> hello@msoma.org</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-notice">
+        <div class="container"> </div>
+    </div>
+    <!-- jQuery -->
+    <script src="{% static 'ide/js/jquery.min.js' %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% static 'ide/js/bootstrap.min.js' %}" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="/static/js/dashboard.js"></script>
+    
+
+</body>
+</html>

@@ -1,0 +1,284 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<body class="promo-body">
+    <div class="promo-wrapper">
+        <div class="promo-circle">
+            <div class="promo-circle__wrapper">
+                <div></div>
+            </div>
+        </div>
+        <div class="promo-header">
+            <div class="container">
+                <div class="promo-header__container">
+                    <div class="promo-header__logo">M-Soma Lab<span>.</span></div>
+                    <div class="promo-header__links visible-lg">
+                        <a href="/practice" class="promo-header__link link" target="_blank">Code</a>
+                        <div class="promo-header__link link" data-anchor="#features">Features</div>
+                        <a href="/" target="_blank" class="promo-header__link link">Discuss</a>
+                        <div class="promo-header__link link" data-anchor="#pricing">For Schools</div>
+                    </div>
+                    {% if user.is_authenticated %}
+                    <div class="promo-header__actions">
+                        <a class="promo-header__login" href="/profile">{{ user.username }}
+                        </a>
+                        <a class="promo-header__register" href="{% url 'logout' %}">Logout</a>
+                    </div>
+                    {% else %}
+                    <div class="promo-header__actions">
+                        <a class="promo-header__login" href="{% url 'login' %}">Login</a>
+                        <a class="promo-header__register" href="{% url 'signup' %}">Try it free</a>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <div class="promo-header flap visible-lg">
+            <div class="container">
+                <div class="promo-header__container">
+                    <div class="promo-header__logo">M-Soma Lab<span>.</span></div>
+                    <div class="promo-header__links visible-lg">
+                        <a href="/practice" class="promo-header__link link" target="_blank">Code</a>
+                        <div class="promo-header__link link" data-anchor="#features">Features</div>
+                        <a href="/" target="_blank" class="promo-header__link link">Discuss</a>
+                        <div class="promo-header__link link" data-anchor="#pricing">For Schools</div>
+                    </div>
+                    <div class="promo-header__actions">
+                        <a class="promo-header__login" href="{% url 'login' %}">Login</a>
+                        <a class="promo-header__register" href="{% url 'signup' %}">Try it free</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="promo-spotlight">
+            <div class="container">
+                <div class="promo-spotlight__container">
+                    <h1 class="promo-spotlight__heading">Powering the <br>world's best <br>digital education</h1>
+                </div>
+            </div>
+        </div>
+        <div class="promo-list">
+            <div class="container">
+                <div class="promo-list__container">
+                    <div class="promo-list__screen">
+                        <div class="promo-screen timer"></div>
+                    </div>
+                    <div class="promo-list__content">
+                        <div class="promo-list__span">
+                            <h3 class="promo-list__label">Code<span>.</span></h3>
+                            <div class="promo-list__text">Join a vibrant community of developers, improve your coding skills, and build your app<span>.</span></div>
+                        </div>
+                        <div class="promo-list__span">
+                            <h3 class="promo-list__label">Get hired<span>.</span></h3>
+                            <div class="promo-list__text">Prepare for interviews, practice coding, and get hired by companies in Nairobi<span>.</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="promo-section" id="features">
+            <div class="container">
+                <div class="promo-section__container">
+                    <h2 class="promo-section__heading">Join Africa's fastest <br>growing developer
+                        <br> community</h2>
+                    <div class="promo-section__body">
+                        <div class="promo-section__content">
+                            <div class="promo-section__lead">Compete with the best developers on the continent and challenge yourself<span class="dot">.</span></div>
+                            <div class="promo-section__hint focus visible-lg">
+                                <div class="promo-section__addon">
+                                    <h3 class="promo-section__label">Focus<span class="dot">.</span></h3>
+                                    <div class="promo-section__text">Clear project overview helping you to monitor your company's health and make fast decisions<span class="dot">.</span></div>
+                                </div>
+                                <div class="promo-section__zoom">
+                                    <svg>
+                                        <circle r="48" cx="50" cy="50" transform="rotate(180, 50, 50)" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="promo-section__screen" data-position="left">
+                            <div class="promo-screen projects"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="promo-section">
+            <div class="container">
+                <div class="promo-section__container">
+                    <h2 class="promo-section__heading">Get noticed for your<br> innovative work</h2>
+                    <div class="promo-section__body">
+                        <div class="promo-section__content">
+                            <div class="promo-section__lead">Our partner companies use <br>M-Soma Lab to recruit the best tech talent<span class="dot">.</span></div>
+                            <div class="promo-section__hint live visible-lg">
+                                <div class="promo-section__addon">
+                                    <h3 class="promo-section__label">Stand out<span class="dot">.</span></h3>
+                                    <div class="promo-section__text">As you solve more challenges, your ranking goes up, and you will be most likely to get noticed by recruiters<span class="dot">.</span></div>
+                                </div>
+                                <div class="promo-section__zoom">
+                                    <svg>
+                                        <circle r="48" cx="50" cy="50" transform="rotate(180, 50, 50)" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="promo-section__screen" data-position="right">
+                            <div class="promo-screen team"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="promo-section">
+            <div class="container">
+                <div class="promo-section__container">
+                    <h2 class="promo-section__heading">Participate in online <br>hackathons</h2>
+                    <div class="promo-section__body">
+                        <div class="promo-section__content">
+                            <div class="promo-section__lead">In the comfort of your room, you can collaborate with developers from around the world during our monthly HackTheGlobe challenges<span class="dot">.</span></div>
+                            <div class="promo-section__hint report visible-lg">
+                                <div class="promo-section__addon">
+                                    <h3 class="promo-section__label">Help solve real-world problems<span class="dot">.</span></h3>
+                                    <div class="promo-section__text">A global community with a personal touch<span class="dot">.</span></div>
+                                </div>
+                                <div class="promo-section__zoom">
+                                    <svg>
+                                        <circle r="48" cx="50" cy="50" transform="rotate(180, 50, 50)" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="promo-section__screen" data-position="right">
+                            <div class="promo-screen reports"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!--         <div class="promo-section app">
+            <div class="container">
+                <div class="promo-section__container">
+                    <h2 class="promo-section__heading">Track time from<br>desktop <sup class="promo-section__heading-badge">new</sup></h2>
+                    <div class="promo-section__body">
+                        <div class="promo-section__content">
+                            <div class="promo-section__hint app visible-lg">
+                                <div class="promo-section__addon">
+                                    <h3 class="promo-section__label"><a href="https://download.pulse.red/" class="link-section-header">Tray application</a><span class="dot">.</span></h3>
+                                    <div class="promo-section__text">No need to keep browser opened. Try our minimal desktop app to track time spent on your projects<span class="dot">.</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="promo-section__screen" data-position="right">
+                            <div class="promo-screen app"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <div class="promo-roll" id="pricing">
+            <div class="container">
+                <div class="promo-roll__container">
+                    <div class="promo-roll__content">
+                        <h2 class="promo-roll__heading">Schools and colleges</h2>
+                        <div class="promo-roll__items">
+                            <div class="promo-roll__item">
+                                <div class="promo-roll__label">Partner schools</div>
+                                <div class="promo-roll__annex">
+                                    <div class="promo-roll__em">free</div>
+                                    <div class="promo-roll__list">
+                                        Class project submission
+                                        <br> Autograding
+                                        <br> 100 students per school
+                                        <br>
+                                        <span class="promo-roll__list-dash">−</span>
+                                        <br>
+                                        <span class="promo-roll__list-dash">−</span>
+                                        <br>
+                                        <span class="promo-roll__list-dash">−</span>
+                                        <br>
+                                        <span class="promo-roll__list-dash">−</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="promo-roll__item">
+                                <div class="promo-roll__label">Companies</div>
+                                <div class="promo-roll__annex">
+                                    <div class="promo-roll__price">
+                                        <div class="promo-roll__em">999</div>
+                                        <div class="promo-roll__postfix"><span>ksh</span>/month
+                                            <br>per user</div>
+                                    </div>
+                                    <div class="promo-roll__list">
+                                        Weekly email reports
+                                        <br> Project time estimates
+                                        <br> Unlimited users
+                                        <br>
+                                        <span class="promo-roll__list-dash">+</span> Team dashboard <span class="promo-roll__hidden">& management</span>
+                                        <br>
+                                        <span class="promo-roll__list-dash">+</span> Live Team view
+                                        <br>
+                                        <span class="promo-roll__list-dash">+</span> Collaboration
+                                        <br>
+                                        <span class="promo-roll__list-dash">+</span> Team performance reports
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="promo-footer">
+            <div class="promo-footer__circle"></div>
+            <div class="container">
+                <div class="promo-footer__container">
+                    <div class="promo-footer__action">
+                        <a class="promo-footer__btn" href="{% url 'signup' %}">Try it free</a>
+                        <div class="promo-footer__text">Technology with a
+                            <br>human touch.</div>
+                    </div>
+                    <div class="promo-footer__app-blk">
+                        <div class="promo-footer__app-title">Mobile app coming soon</div>
+                        <div class="promo-footer__app-inner">
+                            <a href="/" class="promo-footer__app-link">
+                                <svg class="promo-footer__app-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="22" viewBox="0 0 18 22">
+                                    <path fill-rule="evenodd" d="M14.766 11.61a3.618 3.618 0 0 0 .328 1.687c.437 1.156 1.281 2.031 2.531 2.625a12.192 12.192 0 0 1-1.734 3.422c-1.032 1.406-2.047 2.125-3.047 2.156-.438 0-1-.14-1.688-.422-.75-.281-1.39-.422-1.922-.422-.53 0-1.203.157-2.015.469-.657.25-1.157.375-1.5.375-.688.031-1.422-.344-2.203-1.125-.594-.594-1.188-1.406-1.782-2.438-.468-.843-.828-1.609-1.078-2.296C.22 14.328 0 13.063 0 11.844c0-1.344.266-2.5.797-3.469.5-.906 1.164-1.594 1.992-2.062a5.61 5.61 0 0 1 2.602-.75c.5 0 1.265.187 2.296.562.657.25 1.079.375 1.266.375.188 0 .578-.11 1.172-.328a18.174 18.174 0 0 1 1.406-.469c.594-.156 1.125-.219 1.594-.187 1.781.156 3.11.859 3.984 2.109-1.593.938-2.375 2.266-2.343 3.984zm-2.672-7.735v.047c-1 1.156-2.078 1.687-3.235 1.594-.125-1.25.266-2.375 1.172-3.375.375-.438.86-.813 1.453-1.125C12.078.703 12.656.53 13.22.5c.093 1.25-.282 2.375-1.125 3.375z" />
+                                </svg>
+                                iPhone
+                            </a>
+                            <a href="/" class="promo-footer__app-link">
+                                <svg class="promo-footer__app-icon" xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 50 50">
+                                    <path fill-rule="evenodd" d="M 16.28125 0.03125 C 16.152344 0.0546875 16.019531 0.078125 15.90625 0.15625 C 15.449219 0.464844 15.347656 1.105469 15.65625 1.5625 L 17.8125 4.78125 C 14.480469 6.546875 11.996094 9.480469 11.1875 13 L 38.8125 13 C 38.003906 9.480469 35.519531 6.546875 32.1875 4.78125 L 34.34375 1.5625 C 34.652344 1.105469 34.550781 0.464844 34.09375 0.15625 C 33.632813 -0.152344 32.996094 -0.0195313 32.6875 0.4375 L 30.3125 3.9375 C 28.664063 3.335938 26.875 3 25 3 C 23.125 3 21.335938 3.335938 19.6875 3.9375 L 17.3125 0.4375 C 17.082031 0.09375 16.664063 -0.0429688 16.28125 0.03125 Z M 19.5 8 C 20.328125 8 21 8.671875 21 9.5 C 21 10.332031 20.328125 11 19.5 11 C 18.667969 11 18 10.332031 18 9.5 C 18 8.671875 18.667969 8 19.5 8 Z M 30.5 8 C 31.332031 8 32 8.671875 32 9.5 C 32 10.332031 31.332031 11 30.5 11 C 29.671875 11 29 10.332031 29 9.5 C 29 8.671875 29.671875 8 30.5 8 Z M 8 15 C 6.34375 15 5 16.34375 5 18 L 5 32 C 5 33.65625 6.34375 35 8 35 C 8.351563 35 8.6875 34.925781 9 34.8125 L 9 15.1875 C 8.6875 15.074219 8.351563 15 8 15 Z M 11 15 L 11 37 C 11 38.652344 12.347656 40 14 40 L 36 40 C 37.652344 40 39 38.652344 39 37 L 39 15 Z M 42 15 C 41.648438 15 41.3125 15.074219 41 15.1875 L 41 34.8125 C 41.3125 34.921875 41.648438 35 42 35 C 43.65625 35 45 33.65625 45 32 L 45 18 C 45 16.34375 43.65625 15 42 15 Z M 15 42 L 15 46 C 15 48.207031 16.792969 50 19 50 C 21.207031 50 23 48.207031 23 46 L 23 42 Z M 27 42 L 27 46 C 27 48.207031 28.792969 50 31 50 C 33.207031 50 35 48.207031 35 46 L 35 42 Z "/>
+                                </svg>
+                                Android
+                            </a>
+                            <a href="/" class="promo-footer__app-link">
+                                <svg class="promo-footer__app-icon" xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22">
+                                    <path fill-rule="evenodd" d="M8.625 2.188v8.343H0V3.406l8.625-1.218zM0 18.594v-7.031h8.625v8.25L0 18.593zm9.562 1.312v-8.343H21V21.5L9.562 19.906zm0-17.812L21 .5v10.031H9.562V2.094z" />
+                                </svg>
+                                Win
+                            </a>
+                        </div>
+                    </div>
+                    <div class="promo-footer__addon">
+                        <div class="promo-footer__items promo-footer__port">
+                            <div class="promo-footer__item promo-footer__copyright">
+                                &copy; 2018 <span>M-Soma Institute</span>
+                            </div>
+                            <a class="promo-footer__item link" href="/terms">Terms of use</a>
+                            <a class="promo-footer__item link" href="/privacy">Privacy Policy</a>
+                            <a class="promo-footer__item link" href="mailto:hello@msoma.org"><i class="fa fa-envelope-open"></i> hello&commat;msoma.org</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/static/js/manifest.d41d8cd9.js"></script>
+    <script src="/static/js/app-promo.2744811d.js"></script>
+    <script src="/static/js/jquery.min.js" charset="utf-8"></script>
+
+</body>
+{% endblock %}

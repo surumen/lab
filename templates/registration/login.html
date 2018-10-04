@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<body class="login">
+    <div class="container">
+        <div class="form-login__header">
+            <a class="header-logo" href="/">M-Soma Institute<span>.</span></a>
+        </div>
+    </div>
+    <div class="container form-login__container">
+        <form class="form-login form-login__content" method="post" action="{% url 'login' %}">
+            <div class="form-login__heading">Hello! Welcome back<span class="text-alert">.</span></div>
+            {% csrf_token %}
+            <table>
+                <tr>
+                    <td>{{ form.username.label_tag }}</td>
+                    <td>{{ form.username }}</td>
+                </tr>
+                <tr>
+                    <td>{{ form.password.label_tag }}</td>
+                    <td>{{ form.password }}</td>
+                </tr>
+            </table>
+            <!-- <input type="text" placeholder="E-mail" class="form-control" name="_username" value="">
+            <input type="password" placeholder="Password" class="form-control" name="_password"> -->
+            <div class="form-commit form-login__commit">
+                <button type="submit" class="btn-primary" value="login">Log in</button>
+                <input type="hidden" name="next" value="{{ next }}">
+                <a href="{% url 'password_reset' %}" class="btn-link">Forgotten password?</a>
+            </div>
+        </form>
+    </div>
+    <div class="form-login__decore"></div>
+    <div class="footer-blk">
+        <div class="container">
+            <div class="footer-blk__container">
+                <div class="footer-blk__copyright">
+                    © 2018 <span class="footer-logo">M-Soma<span>Institute</span></span>
+                </div>
+                <div class="footer-blk__nav">
+                    <div class="footer-nav">
+                        <a href="/privacy" target="_blank" class="footer-nav__item">Privacy Policy</a>
+                        <a href="/terms" target="_blank" class="footer-nav__item">Terms of use</a>
+                    </div>
+                    <div class="footer-nav footer-nav--right">
+                        <a href="https://instagram.com/msoma.institute" target="_blank" class="footer-nav__item no-mob">Instagram</a>
+                        <a href="mailto:hello@msoma.org" class="footer-nav__item"><i class="fa fa-envelope-open"></i> hello@msoma.org</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- <form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Login</button>
+</form>
+-->
+{% endblock %} 

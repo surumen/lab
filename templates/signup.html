@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{% block title %}Sign Up{% endblock %}
+
+<!--   <h2>Sign up</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Sign up</button>
+  </form> -->
+<body class="login">
+    <div class="container">
+        <div class="form-login__header">
+            <a class="header-logo" href="/">M-Soma Lab<span>.</span></a>
+        </div>
+    </div>
+    {% block content %}
+    <div class="container form-login__container">
+        <form class="form-login form-login__content" method="post">
+            <div class="form-login__heading">Hello! Nice to meet you<span class="text-alert">.</span>
+            <!-- {% if form.non_field_errors %}
+            <div id="messages">
+                {% for message in form.non_field_errors %}
+                <span class="text-alert" role="alert">
+                </span>
+                {{ message|escape }}
+                {% endfor %}
+            </div>
+            {% endif %} -->
+            </div>
+            {% csrf_token %}
+
+            <!-- Username -->
+            <input type="text" id="id_username" name="username" required="required" placeholder="Username" class="double-bottom form-control" />
+            <!-- <div class="error-block">{{ form.username.errors }}</div> -->
+
+
+            <!-- Email -->
+            <!-- <input type="email" id="app_create_workspace_username" name="app_create_workspace[username]" required="required" placeholder="E-mail" class="form-control" /> -->
+
+            <!-- Password -->
+            <input type="password" id="id_password1" name="password1" required="required" placeholder="Password" class="form-control" />
+            <!-- <div class="error-block">{{ form.password1.errors }}</div> -->
+
+            <!-- Confirm Password -->
+            <input type="password" id="id_password2" name="password2" required="required" placeholder="Confirm Password" class="form-control" />
+            <!-- <div class="error-block">{{ form.password2.errors }}</div> -->
+
+            <div class="form-commit">
+                <button type="submit" name="register" class="btn-primary">Register</button>
+            </div>
+            <div class="form-login__help">
+                <div>By creating an account, you agree to the <a href="/terms">Terms and Conditions & Privacy</a> and <a href="/cookies">Cookies Policy.</a></div>
+            </div>
+        </form>
+    </div>
+    {% endblock content %}
+    <div class="form-login__decore"></div>
+    <div class="footer-blk">
+        <div class="container">
+            <div class="footer-blk__container">
+                <div class="footer-blk__copyright">
+                    © 2018 <span class="footer-logo">M-Soma <span>Institute</span></span>
+                </div>
+                <div class="footer-blk__nav">
+                    <div class="footer-nav">
+                        <a href="/privacy" target="_blank" class="footer-nav__item">Privacy Policy</a>
+                        <a href="/terms" target="_blank" class="footer-nav__item">Terms of use</a>
+                    </div>
+                    <div class="footer-nav footer-nav--right">
+                        <a href="https://instagram.com/msoma.institute" target="_blank" class="footer-nav__item no-mob">Instagram</a>
+                        <a href="mailto:hello@msoma.org" class="footer-nav__item"><i class="fa fa-envelope-open"></i> hello@msoma.org</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

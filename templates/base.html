@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %} | M-Soma Lab{% endblock %}</title>
+    <meta name="twitter:site" content="@PulseredHQ">
+    <meta name="twitter:title" content="Pulse.red — track your project’s time.">
+    <meta name="twitter:description" content="Powerful time tracker for those who appriciate simplicity. No useless infographics; stay focused on the main things.">
+    <meta name="twitter:url" content="https://pulse.red">
+    <meta name="twitter:image" content="https://pulse.red/og-image.png">
+    <meta name="description" content="Powerful time tracker for those who appriciate simplicity. No useless infographics; stay focused on the main things.">
+    <meta property="og:site_name" content="Pulse.red">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pulse.red">
+    <meta property="og:title" content="Pulse.red — track your project’s time.">
+    <meta property="og:description" content="Powerful time tracker for those who appriciate simplicity. No useless infographics; stay focused on the main things.">
+    <link rel="mask-icon" href="mask-icon.svg%3Fv=2" color="#D0021B">
+    <link rel="stylesheet" href="https://fonts.typotheque.com/WF-031211-010285.css" type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/global.css' %}" type="text/css"/> 
+
+</head>
+<!--   <div class="jumbotron">
+    <div class="container" >
+      {% if messages %}
+      <div id="messages">
+        {% for message in messages %}
+        <div class="alert alert-dismissible alert-info"
+             role="alert">
+          <button type="button" class="close" data-dismiss="alert"
+                  aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          {{ message|escape }}
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
+    <div class="row">
+  </div> -->
+{% block content %}
+{% endblock %}
+</html>
